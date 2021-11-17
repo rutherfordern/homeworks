@@ -9,8 +9,8 @@ public class Task2 {
         float totalWeightBoxer = weightFirstBoxer + weightSecondBoxer;
         float differenceWeightBoxer = weightSecondBoxer - weightFirstBoxer;
 
-        System.out.println(totalWeightBoxer);
-        System.out.println(differenceWeightBoxer);
+        System.out.println("Общий вес двух боксеров: " + totalWeightBoxer + " кг.");
+        System.out.println("Разница в весе боксеров: " + differenceWeightBoxer + " кг.");
 
     }
 }
