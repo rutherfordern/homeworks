@@ -10,33 +10,34 @@ public class Task5 {
     }
 
     // Расчет разницы в годовом доходе
-    public static int calculateDifferenceAnnualSalary (int annualSalaryPerson1, int annualSalaryPerson2) {
-        int result = (annualSalaryPerson1 - annualSalaryPerson2) * 12;
-        return result;
+    public static int calculateDifferenceAnnualSalary (int newSalary, int basicSalary) {
+        return  (newSalary - basicSalary) * 12;
     }
 
 
     public static void main(String[] args) {
 
-        int salaryMasha, salaryDenis, salaryKristina;
-        salaryMasha = 67_760;
-        salaryDenis = 83_690;
-        salaryKristina = 76_230;
+        int salaryMasha = 67_760;
+        int salaryDenis = 83_690;
+        int salaryKristina = 76_230;
 
         // Информация о Маше
-        int totalSalaryMasha = calculateDifferenceAnnualSalary(calculateSalaryIncrease(salaryMasha),salaryMasha);
-        System.out.print("Маша теперь получает " + calculateSalaryIncrease(salaryMasha) + " рублей. ");
-        System.out.println("Годовой доход вырос на " + totalSalaryMasha + " рублей.");
+        int totalSalaryMasha = calculateSalaryIncrease(salaryMasha);
+        System.out.print("Маша теперь получает " + totalSalaryMasha + " рублей. ");
+        int annualSalaryMasha = calculateDifferenceAnnualSalary(totalSalaryMasha,salaryMasha);
+        System.out.println("Годовой доход вырос на " + annualSalaryMasha + " рублей.");
 
         // Информация о Денисе
-        int totalSalaryDenis = calculateDifferenceAnnualSalary(calculateSalaryIncrease(salaryDenis),salaryDenis);
-        System.out.print("Денис теперь получает " + calculateSalaryIncrease(salaryDenis) + " рублей. ");
-        System.out.println("Годовой доход вырос на " + totalSalaryDenis + " рублей.");
+        int totalSalaryDenis = calculateSalaryIncrease(salaryDenis);
+        System.out.print("Денис теперь получает " + totalSalaryDenis + " рублей. ");
+        int annualSalaryDenis = calculateDifferenceAnnualSalary(totalSalaryDenis,salaryDenis);
+        System.out.println("Годовой доход вырос на " + annualSalaryDenis + " рублей.");
 
         // Информация о Кристине
-        int totalSalaryKristina = calculateDifferenceAnnualSalary(calculateSalaryIncrease(salaryKristina),salaryKristina);
-        System.out.print("Кристина теперь получает " + calculateSalaryIncrease(salaryKristina) + " рублей. ");
-        System.out.print("Годовой доход вырос на " + totalSalaryKristina + " рублей.");
+        int totalSalaryKristina = calculateSalaryIncrease(salaryKristina);
+        System.out.print("Кристина теперь получает " + totalSalaryKristina + " рублей. ");
+        int annualSalaryKristina = calculateDifferenceAnnualSalary(totalSalaryKristina, salaryKristina);
+        System.out.print("Годовой доход вырос на " + annualSalaryKristina + " рублей.");
 
 
     }
