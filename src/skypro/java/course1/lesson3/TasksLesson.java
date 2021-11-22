@@ -13,6 +13,8 @@ public class TasksLesson {
         // Задача 3
         findLeapYear();
 
+        // Задача 4
+        calculateSDistanceDelivery();
 
     }
 
@@ -58,8 +60,18 @@ public class TasksLesson {
         }
     }
 
+    public static void calculateSDistanceDelivery() {
 
+        int deliveryDistance = 95;
+        int dayDelivery = 1;
 
-
+        if (deliveryDistance < 20) {
+            System.out.println("Потребуется дней для доставки: " + dayDelivery);
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            System.out.println("Потребуется дней для доставки: " + (dayDelivery + 1));
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
+            System.out.println("Потребуется дней для доставки: " + (dayDelivery + 2));
+        }
+    }
 
 }
