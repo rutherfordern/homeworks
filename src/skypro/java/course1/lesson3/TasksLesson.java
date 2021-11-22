@@ -14,7 +14,10 @@ public class TasksLesson {
         findLeapYear();
 
         // Задача 4
-        calculateSDistanceDelivery();
+        calculateDistanceDelivery();
+
+        // Задача 5
+        getSeasonYear();
 
     }
 
@@ -60,7 +63,7 @@ public class TasksLesson {
         }
     }
 
-    public static void calculateSDistanceDelivery() {
+    public static void calculateDistanceDelivery() {
 
         int deliveryDistance = 95;
         int dayDelivery = 1;
@@ -71,6 +74,36 @@ public class TasksLesson {
             System.out.println("Потребуется дней для доставки: " + (dayDelivery + 1));
         } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
             System.out.println("Потребуется дней для доставки: " + (dayDelivery + 2));
+        }
+    }
+
+    public static void getSeasonYear() {
+
+        int monthNumber = 12;
+
+        switch (monthNumber) {
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осень");
+                break;
+            case 1:
+            case 2:
+            case 12:
+                System.out.println("Зима");
+                break;
+            default:
+                System.out.println("Номер месяца больше 12");
         }
     }
 
