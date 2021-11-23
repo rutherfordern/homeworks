@@ -70,9 +70,9 @@ public class TasksLesson {
 
         if (deliveryDistance < 20) {
             System.out.println("Потребуется дней для доставки: " + dayDelivery);
-        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+        } else if (deliveryDistance < 60) {
             System.out.println("Потребуется дней для доставки: " + (dayDelivery + 1));
-        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
+        } else if (deliveryDistance < 100) {
             System.out.println("Потребуется дней для доставки: " + (dayDelivery + 2));
         }
     }
