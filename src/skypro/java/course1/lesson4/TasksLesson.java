@@ -9,6 +9,9 @@ public class TasksLesson {
         printNumbersLoopFor();
         System.out.println(" ");
 
+        // Задача 2
+        calculateFridayInWeek();
+
     }
 
     public static void printNumbersLoopWhile() {
@@ -22,6 +25,12 @@ public class TasksLesson {
     public static void printNumbersLoopFor() {
         for (int i = 10; i >= 1; i--) {
             System.out.print(i + " ");
+        }
+    }
+
+    public static void calculateFridayInWeek() {
+        for (int friday = 3; friday < 31; friday += 7) {
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
         }
     }
 }
