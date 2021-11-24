@@ -7,10 +7,12 @@ public class TasksLesson {
         printNumbersLoopWhile();
         System.out.println(" ");
         printNumbersLoopFor();
-        System.out.println(" ");
 
         // Задача 2
         calculateFridayInWeek();
+
+        // Задача 3
+        calculateCometTrajectory();
 
     }
 
@@ -31,6 +33,18 @@ public class TasksLesson {
     public static void calculateFridayInWeek() {
         for (int friday = 3; friday < 31; friday += 7) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
+        }
+    }
+
+    public static void calculateCometTrajectory() {
+        int currentYear = 2021;
+        int beginYear = currentYear - 200;
+        int nextYear = currentYear + 100;
+
+        for (int i = beginYear; i < nextYear; i++) {
+            if (i % 79 == 0) {
+                System.out.println(i);
+            }
         }
     }
 }
