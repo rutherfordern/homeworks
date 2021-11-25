@@ -31,7 +31,8 @@ public class TasksLesson {
     }
 
     public static void calculateFridayInWeek() {
-        for (int friday = 3; friday < 31; friday += 7) {
+        int friday = 3;
+        for (int i = friday; i < 31; i += 7) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
         }
     }
