@@ -1,5 +1,6 @@
 package skypro.java.course1.lesson5;
 
+
 public class TasksLesson {
     public static void main(String[] args) {
 
@@ -13,5 +14,45 @@ public class TasksLesson {
 
         String[] stringArray = {"hello", "world", "xe-xe"};
 
+        // Задача 2
+        printArray(intArray);
+        System.out.println(" ");
+        printArray(doubleArray);
+        System.out.println(" ");
+        printArray(stringArray);
+
+
     }
+
+    public static void printArray(int[] array) {
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+    }
+
+    public static void printArray(double[] array) {
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+    }
+
+    public static void printArray(String[] array) {
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+    }
+
+
 }
