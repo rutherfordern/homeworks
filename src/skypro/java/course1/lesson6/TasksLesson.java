@@ -8,12 +8,13 @@ public class TasksLesson {
         int[] array = generateRandomArray();
 
         // Задача 1
-        calculateMonthlyPayments(array);
+        System.out.println("Сумма трат за месяц составила " + calculateMonthlySpend(array) + " рублей.");
 
         // Задача 2
         getMinMaxSpendDay(array);
 
-
+        // Задача 3
+        calculateAverageMonthlySpend(array);
 
     }
 
@@ -28,14 +29,14 @@ public class TasksLesson {
         return arr;
     }
 
-    public static void calculateMonthlyPayments (int[] arrayPayments) {
+    public static int calculateMonthlySpend (int[] arrayPayments) {
 
         int sum = 0;
         for (int value : arrayPayments) {
             sum += value;
         }
 
-        System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
+        return sum;
     }
 
     public static void getMinMaxSpendDay (int[] arrayPayments) {
@@ -54,5 +55,10 @@ public class TasksLesson {
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей. "
                           + "Максимальная сумма трат за день составила " + max + " рублей.");
 
+    }
+
+    public static void calculateAverageMonthlySpend (int[] arrayPayments) {
+        double averageSumMonth = calculateMonthlySpend(arrayPayments) / 30;
+        System.out.println("Средняя сумма трат за месяц составила " + averageSumMonth + " рублей.");
     }
 }
