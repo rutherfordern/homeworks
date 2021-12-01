@@ -41,15 +41,12 @@ public class TasksLesson {
     public static void getMinMaxSpendDay (int[] arrayPayments) {
 
         int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
         for (int value : arrayPayments) {
             if (value < min) {
                 min = value;
-            }
-        }
-
-        int max = Integer.MIN_VALUE;
-        for (int value : arrayPayments) {
-            if (value > max) {
+            } else if (value > max) {
                 max = value;
             }
         }
