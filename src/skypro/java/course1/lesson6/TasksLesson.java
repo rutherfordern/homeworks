@@ -10,6 +10,10 @@ public class TasksLesson {
         // Задача 1
         calculateMonthlyPayments(array);
 
+        // Задача 2
+        getMinMaxSpendDay(array);
+
+
 
     }
 
@@ -26,11 +30,32 @@ public class TasksLesson {
 
     public static void calculateMonthlyPayments (int[] arrayPayments) {
 
-        long sum = 0L;
-        for (int elements : arrayPayments) {
-            sum += elements;
+        int sum = 0;
+        for (int value : arrayPayments) {
+            sum += value;
         }
 
         System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
+    }
+
+    public static void getMinMaxSpendDay (int[] arrayPayments) {
+
+        int min = Integer.MAX_VALUE;
+        for (int value : arrayPayments) {
+            if (value < min) {
+                min = value;
+            }
+        }
+
+        int max = Integer.MIN_VALUE;
+        for (int value : arrayPayments) {
+            if (value > max) {
+                max = value;
+            }
+        }
+
+        System.out.println("Минимальная сумма трат за день составила " + min + " рублей. "
+                          + "Максимальная сумма трат за день составила " + max + " рублей.");
+
     }
 }
