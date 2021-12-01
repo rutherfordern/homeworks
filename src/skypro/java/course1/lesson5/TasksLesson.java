@@ -16,13 +16,13 @@ public class TasksLesson {
 
         // Задача 2 и 3
         printArray(intArray);
-        System.out.println(" ");
+        System.out.println();
         printArray(doubleArray);
-        System.out.println(" ");
+        System.out.println();
         printArray(stringArray);
 
         // Задача 4
-        System.out.println(" ");
+        System.out.println();
         makeArrayNumberEven(intArray);
 
 
@@ -38,11 +38,11 @@ public class TasksLesson {
             }
         }
 
-        System.out.println(" ");
+        System.out.println();
 
         for (int i = array.length - 1; i >= 0; i--) {
             System.out.print(array[i]);
-            if (0 < i) {
+            if (i > 0) {
                 System.out.print(", ");
             }
         }
@@ -58,11 +58,11 @@ public class TasksLesson {
             }
         }
 
-        System.out.println(" ");
+        System.out.println();
 
         for (int i = array.length - 1; i >= 0; i--) {
             System.out.print(array[i]);
-            if (0 < i) {
+            if (i > 0) {
                 System.out.print(", ");
             }
         }
