@@ -3,9 +3,12 @@ package skypro.java.course1.lesson6;
 import java.util.Random;
 
 public class TasksLesson {
+
+    public static int[] array = generateRandomArray();
+
     public static void main(String[] args) {
 
-        int[] array = generateRandomArray();
+        // int[] array = generateRandomArray();
 
         // Задача 1
         System.out.println("Сумма трат за месяц составила " + calculateMonthlySpend(array) + " рублей.");
@@ -14,7 +17,7 @@ public class TasksLesson {
         getMinMaxSpendDay(array);
 
         // Задача 3
-        calculateAverageMonthlySpend(array);
+        calculateAverageMonthlySpend();
 
         // Задача 4
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
@@ -62,8 +65,8 @@ public class TasksLesson {
 
     }
 
-    public static void calculateAverageMonthlySpend (int[] arrayPayments) {
-        double averageSumMonth = calculateMonthlySpend(arrayPayments) / 30;
+    public static void calculateAverageMonthlySpend () {
+        double averageSumMonth = (calculateMonthlySpend(array) * 1.0) / 30;
         System.out.println("Средняя сумма трат за месяц составила " + averageSumMonth + " рублей.");
     }
 }
