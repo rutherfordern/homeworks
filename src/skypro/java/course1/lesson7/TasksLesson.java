@@ -19,5 +19,10 @@ public class TasksLesson {
         String replaceFullName = fullName.replace(" ", "; ");
         System.out.println("Данные ФИО сотрудника для административного отдела — " + replaceFullName);
 
+        // Задача 4
+        String fullNameTwo = "Иванов Семён Семёнович";
+        String changeFullNameTwo = fullNameTwo.replace("ё", "е");
+        System.out.println("Данные ФИО сотрудника — " + changeFullNameTwo);
+
     }
 }
