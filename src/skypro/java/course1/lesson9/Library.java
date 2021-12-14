@@ -13,9 +13,11 @@ public class Library {
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
                 books[i] = book;
+                System.out.println("Книга " + book.getNameBook() + " добавлена в библиотеку.");
                 return;
             }
         }
+        System.out.println("Библиотека переполнена, добавьте книгу немного позже.");
     }
 
     // Метод, который печатает все книги в библиотеке
@@ -24,8 +26,13 @@ public class Library {
             if (book != null) {
                 System.out.println(book.getAuthor().getFirstName() + " " + book.getAuthor().getLastName()
                         + ": " + book.getNameBook() + ": " + book.getPublicationYear());
+
+            } else {
+                System.out.println("В библиотеке нет книг.");
+                return;
             }
         }
+        //System.out.println("В библиотеке нет книг.");
     }
 
     // Метод, который печатает информацию о книге по ее названию
@@ -46,7 +53,7 @@ public class Library {
         for (Book book : books) {
             if (nameBook.equals(book.getNameBook())) {
                 book.setBookPublicationYear(newPublicationYear);
-                System.out.println("Год публикации книги " + book.getNameBook() + " на "
+                System.out.println("Год публикации книги " + book.getNameBook() + " изменен на "
                 + book.getPublicationYear());
             }
         }
