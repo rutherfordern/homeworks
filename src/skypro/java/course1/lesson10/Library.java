@@ -1,5 +1,7 @@
 package skypro.java.course1.lesson10;
 
+import java.util.Arrays;
+
 public class Library {
 
     private final Book[] books;
@@ -56,4 +58,17 @@ public class Library {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        System.out.println("Library: ");
+
+        StringBuilder sb = new StringBuilder();
+        for (Book book : books) {
+            sb.append("Book: ").append(book.getNameBook()).append(" by ").append("Author: ").append(book.getAuthor());
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
 }
