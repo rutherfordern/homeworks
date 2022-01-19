@@ -14,6 +14,9 @@ public class TasksLesson {
         // Задача 3
         calculateCometTrajectory();
 
+        // Задача 4 (повышенная сложность)
+        printPingPong();
+
     }
 
     public static void printNumbersLoopWhile() {
@@ -45,6 +48,22 @@ public class TasksLesson {
         for (int i = beginYear; i < nextYear; i++) {
             if (i % 79 == 0) {
                 System.out.println(i);
+            }
+        }
+    }
+
+    public static void printPingPong() {
+
+        for (int i = 1; i <= 30; i++) {
+
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(i + ": ping pong");
+            } else if (i % 5 == 0) {
+                System.out.println(i + ": pong");
+            } else if (i % 3 == 0) {
+                System.out.println(i + ": ping");
+            } else {
+                System.out.println(i + ":" + " ");
             }
         }
     }

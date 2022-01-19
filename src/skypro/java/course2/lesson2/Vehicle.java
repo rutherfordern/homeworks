@@ -14,9 +14,7 @@ public abstract class Vehicle {
 
 
     public void transportService() {
-        transportServiceBehavior.updateTyre();
-        transportServiceBehavior.checkEngine();
-        transportServiceBehavior.checkTrailer();
+        transportServiceBehavior.checkTransport();
     }
 
 
